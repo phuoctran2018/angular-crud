@@ -18,11 +18,16 @@ export class UpdateComponent implements OnInit {
     const id = this.route.snapshot.paramMap.get('postId');
     this.crudService.getById(id).subscribe((data)=>{
       this.post = data;
+      this.postForm.controls['body'].setValue(data.body);
+      this.postForm.controls['id'].setValue(data.id);
     });
     
     this.postForm = this.formBuilder.group({
+      id: "",
       body: ""
     });
+
+    
   }
 
   constructor(
@@ -32,7 +37,7 @@ export class UpdateComponent implements OnInit {
     private route:ActivatedRoute
   ){ }
   submitForm() {
-    this.crudService.create(this.postForm.value).subscribe(res => {
+    this.crudService.update(this.post.id, this.postForm.value).subscribe(res => {
       this.router.navigateByUrl('/home')})
   }
 

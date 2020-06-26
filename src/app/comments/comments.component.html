@@ -1,0 +1,22 @@
+<h3>Comments of this post</h3>
+<!-- <p>{{ (comment.body)}}</p> -->
+<mat-card *ngFor="let comment of comments" style="margin-top:10px;">
+    <mat-card-content>
+        <p>
+            {{comment.body}}
+        </p>
+    </mat-card-content>
+    <mat-card-actions>
+</mat-card-actions>
+</mat-card>
+<div>
+    <h3>ADDD MORE COMMENTS</h3>
+    <form [formGroup]="postForm" (ngSubmit)="submitForm()" novalidate>
+        <div class="form-group">
+            <div>
+                <textarea matInput class="form-control" formControlName="body" rows="3" col="10"></textarea>
+            </div>
+        </div>
+        <button type="submit">Add comment</button>
+    </form>
+</div>

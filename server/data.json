@@ -9,16 +9,8 @@
       "body": "bar"
     },
     {
-      "body": "asdasd",
+      "body": "3",
       "id": 3
-    },
-    {
-      "body": "post 4",
-      "id": 4
-    },
-    {
-      "body": "post 6",
-      "id": 5
     }
   ],
   "comments": [
@@ -31,6 +23,46 @@
       "id": 2,
       "body": "qux",
       "postId": 2
+    },
+    {
+      "id": 3,
+      "body": "1",
+      "postId": 3
+    },
+    {
+      "id": 4,
+      "body": "1",
+      "postId": 3
+    },
+    {
+      "id": 5,
+      "body": "2",
+      "postId": 3
+    },
+    {
+      "id": 6,
+      "body": "3",
+      "postId": 3
+    },
+    {
+      "id": 7,
+      "body": "4",
+      "postId": 3
+    },
+    {
+      "id": 8,
+      "body": "45",
+      "postId": 3
+    },
+    {
+      "id": 9,
+      "body": "bax",
+      "postId": 1
+    },
+    {
+      "id": 10,
+      "body": "bahoa",
+      "postId": 1
     }
   ]
 }

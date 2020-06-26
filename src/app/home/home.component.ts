@@ -14,13 +14,15 @@ export class HomeComponent implements OnInit {
   constructor(public crudService: CrudService) { }
 
   ngOnInit() {
-
+    this.crudService.getAll().subscribe((data: Post[])=>{
+      this.posts = data;
+    })
+  }
+  deletePost(id) {
+    this.crudService.delete(id).subscribe();
     this.crudService.getAll().subscribe((data: Post[])=>{
       this.posts = data;
     })  
-  }
-  deletePost(id) {
-    this.crudService.delete(id).subscribe()  
   }
 
 }

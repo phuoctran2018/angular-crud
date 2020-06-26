@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 
-import {  throwError, Observable } from 'rxjs';
+import {  throwError, Observable, from } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 
 import { Post } from './post.model';
@@ -26,6 +26,12 @@ export class CrudService {
       catchError(this.errorHandler)
     )
   }  
+  createComment(comment): Observable<Comment> {
+    return this.httpClient.post<Comment>(this.apiServer + '/comments/', JSON.stringify(comment), this.httpOptions)
+    .pipe(
+      catchError(this.errorHandler)
+    )
+  }  
   getById(id): Observable<Post> {
     return this.httpClient.get<Post>(this.apiServer + '/posts/' + id)
     .pipe(
@@ -34,6 +40,12 @@ export class CrudService {
   }
   getComment(): Observable<Comment> {
     return this.httpClient.get<Comment>(this.apiServer + '/comments/')
+    .pipe(
+      catchError(this.errorHandler)
+    )
+  }
+  getCommentById(id): Observable<Comment> {
+    return this.httpClient.get<Comment>(this.apiServer + '/posts/'+ id + '/comments')
     .pipe(
       catchError(this.errorHandler)
     )

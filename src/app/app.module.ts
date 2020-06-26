@@ -14,8 +14,8 @@ import { MatProgressSpinnerModule  } from '@angular/material/progress-spinner';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { CreateComponent } from './create/create.component';
-import { DetailsComponent } from './details/details.component';
 import { UpdateComponent } from './update/update.component';
+import { CommentsComponent } from './comments/comments.component';
 
 
 @NgModule({
@@ -23,8 +23,8 @@ import { UpdateComponent } from './update/update.component';
     AppComponent,
     HomeComponent,
     CreateComponent,
-    DetailsComponent,
     UpdateComponent,
+    CommentsComponent,
   ],
   imports: [
     BrowserModule,
