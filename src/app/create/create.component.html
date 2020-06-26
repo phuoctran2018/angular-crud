@@ -1,0 +1,12 @@
+<div>
+    <h1>Create post</h1>
+    <form [formGroup]="postForm" (ngSubmit)="submitForm()" novalidate>
+        <div class="form-group">
+            <mat-card-title>Content</mat-card-title>
+            <div>
+                <textarea matInput class="form-control" formControlName="body" rows="3" maxlength="50"></textarea>
+            </div>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</div>

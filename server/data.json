@@ -1,0 +1,36 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "body": "foo"
+    },
+    {
+      "id": 2,
+      "body": "bar"
+    },
+    {
+      "body": "asdasd",
+      "id": 3
+    },
+    {
+      "body": "asdasd",
+      "id": 4
+    },
+    {
+      "body": "post 5",
+      "id": 5
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "baz",
+      "postId": 1
+    },
+    {
+      "id": 2,
+      "body": "qux",
+      "postId": 2
+    }
+  ]
+}
