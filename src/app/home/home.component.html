@@ -3,16 +3,17 @@
 
     <mat-card *ngFor="let post of posts" style="margin-top:10px;">
         <mat-card-header>
-            <mat-card-title>{{post.id}}</mat-card-title>
+            <mat-card-title>Post number: {{post.id}}</mat-card-title>
         </mat-card-header>
         <mat-card-content>
+            Content:
             <p>
                 {{post.body}}
             </p>
         </mat-card-content>
         <mat-card-actions>
-      <button mat-button> Edit post</button>
-      <button mat-button (click)="crudService.delete(post.id)">Remove</button>
+      <button mat-button routerLink="/update/{{ post.id }}"> Edit post</button>
+      <button mat-button (click)="deletePost(post.id)">Remove</button>
     </mat-card-actions>
     </mat-card>
 </div>

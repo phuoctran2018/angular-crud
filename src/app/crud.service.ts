@@ -5,6 +5,7 @@ import {  throwError, Observable } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 
 import { Post } from './post.model';
+import { Comment } from './comment.model';
 
 @Injectable({
   providedIn: 'root'
@@ -27,6 +28,12 @@ export class CrudService {
   }  
   getById(id): Observable<Post> {
     return this.httpClient.get<Post>(this.apiServer + '/posts/' + id)
+    .pipe(
+      catchError(this.errorHandler)
+    )
+  }
+  getComment(): Observable<Comment> {
+    return this.httpClient.get<Comment>(this.apiServer + '/comments/')
     .pipe(
       catchError(this.errorHandler)
     )

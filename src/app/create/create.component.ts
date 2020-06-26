@@ -12,7 +12,7 @@ export class CreateComponent implements OnInit {
   postForm: FormGroup;
 
   ngOnInit() {
-      this.postForm = this.formBuilder.group({
+    this.postForm = this.formBuilder.group({
       body: ''
     })
   }
